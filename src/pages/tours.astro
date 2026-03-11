@@ -4,25 +4,82 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout title="Tours">
 
-<h1>Mahnjača Mountain Tour</h1>
+<section class="tours">
 
+<h2>Our Experiences</h2>
+
+<div class="tour-grid">
+
+<div class="tour-card">
+<h3>🥾 Mountain Hiking</h3>
 <p>
-A one-day adventure including hiking or tractor transport,
-traditional food, and local experiences.
+Explore beautiful mountain trails around Mahnjača and enjoy
+fresh air, forests, spring water and amazing views.
 </p>
+</div>
 
-<h2>Activities</h2>
+<div class="tour-card">
+<h3>🚜 Tractor Mountain Ride</h3>
+<p>
+Ride a traditional tractor with a trailer to the mountain
+and experience authentic village life.
+</p>
+</div>
 
-<ul>
-<li>Hiking on the mountain</li>
-<li>Tractor ride with trailer</li>
-<li>Traditional Bosnian potato pie</li>
-<li>Cooking pie under sač</li>
-<li>Organic fruit tasting</li>
-</ul>
+<div class="tour-card">
+<h3>🥧 Bosnian Pie Tasting</h3>
+<p>
+Taste traditionally prepared Bosnian potato pie baked under the sač.
+</p>
+</div>
 
-<p>Duration: 6–8 hours</p>
+</div>
 
-<p>Price: 50–70€ per person</p>
+</section>
 
-</MainLayout>
+<style>
+
+.tours{
+margin-top:70px;
+text-align:center;
+}
+
+.tours h2{
+font-size:36px;
+margin-bottom:40px;
+color:#1f3d2b;
+}
+
+.tour-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+gap:30px;
+max-width:1000px;
+margin:auto;
+}
+
+.tour-card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tour-card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+.tour-card h3{
+font-size:22px;
+margin-bottom:15px;
+color:#2e7d32;
+}
+
+.tour-card p{
+font-size:16px;
+line-height:1.6;
+}
+
+</style>

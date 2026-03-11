@@ -4,6 +4,20 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout title="Iron Valley Adventures">
 
+<section class="hero">
+
+<h1>Iron Valley Adventures</h1>
+
+<p>
+Experience authentic mountain life in Željezno Polje.
+Hiking, tractor rides, traditional Bosnian food and organic berries
+in the beautiful nature of Bosnia and Herzegovina.
+</p>
+
+<a href="/tours" class="hero-btn">Explore Tours</a>
+
+</section>
+
 <h2>Discover authentic mountain life in Bosnia</h2>
 
 <p>
@@ -27,5 +41,65 @@ Experience nature, traditional food, and real village life in Željezno Polje.
 <p>
 Tours take place near Mahnjača Mountain in the village of Željezno Polje.
 </p>
+
+<style>
+
+.hero{
+position:relative;
+text-align:center;
+padding:160px 20px;
+background-image:url("/mountain.jpg");
+background-size:cover;
+background-position:center;
+color:white;
+border-radius:10px;
+overflow:hidden;
+}
+
+/* dark overlay */
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,0.45);
+}
+
+/* hero content */
+
+.hero h1,
+.hero p,
+.hero-btn{
+position:relative;
+z-index:2;
+}
+
+.hero h1{
+font-size:64px;
+margin-bottom:20px;
+font-weight:700;
+}
+
+.hero p{
+font-size:22px;
+max-width:700px;
+margin:auto;
+}
+
+.hero-btn{
+display:inline-block;
+margin-top:30px;
+padding:16px 34px;
+background:#2e7d32;
+color:white;
+text-decoration:none;
+font-size:18px;
+border-radius:8px;
+}
+
+</style>
 
 </MainLayout>
