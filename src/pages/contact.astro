@@ -21,17 +21,45 @@ Fill out the form below or contact us directly.
 
 <h2>Book Your Experience</h2>
 
-<form class="booking-form">
+<form 
+action="https://formsubmit.co/efendicredzo4@gmail.com" 
+method="POST"
+class="booking-form">
 
-<input type="text" placeholder="Full Name" required>
+<input 
+type="text" 
+name="name"
+placeholder="Full Name" 
+required>
 
-<input type="email" placeholder="Email Address" required>
+<input 
+type="email" 
+name="email"
+placeholder="Email Address" 
+required>
 
-<input type="number" placeholder="Number of Guests" required>
+<input 
+type="number" 
+name="guests"
+placeholder="Number of Guests" 
+required>
 
-<input type="date" required>
+<input 
+type="date" 
+name="date"
+required>
 
-<textarea placeholder="Message (optional)" rows="4"></textarea>
+<textarea 
+name="message"
+placeholder="Message (optional)" 
+rows="4">
+</textarea>
+
+<!-- optional hidden settings -->
+
+<input type="hidden" name="_subject" value="New Booking Request - Iron Valley Adventures">
+
+<input type="hidden" name="_captcha" value="false">
 
 <button type="submit">Send Booking Request</button>
 
