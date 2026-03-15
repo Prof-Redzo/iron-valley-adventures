@@ -33,11 +33,11 @@ Discover nature, traditional Bosnian food and authentic village life.
 
 <div class="time-card">
 <h3>10:00</h3>
-<p>Tractor ride with trailer to Mahnjača mountain or </p>
+<p>Tractor ride with trailer to Mahnjača mountain.</p>
 </div>
 
 <div class="time-card">
-<h3>10:00</h3>
+<h3>11:00</h3>
 <p>Guided hiking through forests and mountain trails.</p>
 </div>
 
@@ -99,6 +99,8 @@ loading="lazy">
 </iframe>
 
 </section>
+
+
 <section class="reviews">
 
 <h2>What Our Visitors Say</h2>
@@ -127,6 +129,7 @@ loading="lazy">
 
 </section>
 
+
 <section class="gallery">
 
 <h2>Gallery</h2>
@@ -144,30 +147,26 @@ loading="lazy">
 
 </section>
 
-<section class="booking">
 
-<h2>Book Your Experience</h2>
+<section class="book-cta">
 
-<form class="booking-form">
+<h2>Ready for your mountain adventure?</h2>
 
-<input type="text" placeholder="Full Name" required>
+<p>
+Book your experience today and discover authentic Bosnian mountain life.
+</p>
 
-<input type="email" placeholder="Email" required>
-
-<input type="number" placeholder="Number of guests" required>
-
-<input type="date" required>
-
-<button type="submit">Send Booking Request</button>
-
-</form>
+<a href="/contact" class="btn">Book Your Experience</a>
 
 </section>
 
 </MainLayout>
 
 
+
 <style>
+
+/* HERO */
 
 .hero-exp{
 height:420px;
@@ -224,7 +223,7 @@ color:#1f3d2b;
 
 .timeline-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:25px;
 }
 
@@ -275,6 +274,7 @@ margin-bottom:30px;
 color:#1f3d2b;
 }
 
+
 /* REVIEWS */
 
 .reviews{
@@ -306,16 +306,17 @@ text-align:center;
 
 .gallery-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:15px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 margin-top:30px;
 }
 
 .gallery-grid img{
 width:100%;
-height:200px;
+height:180px;
 object-fit:cover;
-border-radius:10px;
+border-radius:12px;
+box-shadow:0 6px 18px rgba(0,0,0,0.1);
 transition:transform 0.3s;
 }
 
@@ -324,40 +325,14 @@ transform:scale(1.05);
 }
 
 
-/* BOOKING */
+/* CTA */
 
-.booking{
+.book-cta{
 margin-top:80px;
 text-align:center;
-}
-
-.booking-form{
-max-width:400px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:15px;
-}
-
-.booking-form input{
-padding:12px;
-border-radius:6px;
-border:1px solid #ccc;
-font-size:16px;
-}
-
-.booking-form button{
-padding:14px;
-background:#2e7d32;
-color:white;
-border:none;
-border-radius:8px;
-font-size:18px;
-cursor:pointer;
-}
-
-.booking-form button:hover{
-background:#1b5e20;
+background:#e8f5e9;
+padding:50px;
+border-radius:10px;
 }
 
 </style>
