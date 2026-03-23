@@ -5,135 +5,124 @@ const base = import.meta.env.BASE_URL;
 
 <html lang="en">
 <head>
-
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 <title>{title}</title>
 
-<link rel="icon" href={base + 'favicon.png'}>
+<!-- Favicon -->
+<link rel="icon" href={`${base}favicon.png`} />
 
 <style>
-
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#e8f5e9;
-color:#333;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #e8f5e9;
+  color: #333;
 }
 
 /* NAVBAR */
-
-header{
-background:#1f3d2b;
-padding:15px 0;
+header {
+  background: #1f3d2b;
+  padding: 15px 0;
 }
 
-.navbar{
-max-width:1100px;
-margin:auto;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:0 20px;
+.navbar {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
 /* LOGO */
-
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-color:white;
-text-decoration:none;
-font-weight:bold;
-font-size:20px;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.logo img{
-height:45px;
+.logo img {
+  height: 45px;
 }
 
 /* NAV LINKS */
-
-nav{
-display:flex;
-gap:30px;
+nav {
+  display: flex;
+  gap: 30px;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-font-weight:bold;
-font-size:17px;
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
 }
 
-nav a:hover{
-text-decoration:underline;
+nav a:hover {
+  text-decoration: underline;
 }
 
 /* PAGE CONTENT */
-
-.container{
-max-width:900px;
-margin:auto;
-padding:40px 20px;
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
 }
 
 /* BUTTON */
-
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:#2e7d32;
-color:white;
-text-decoration:none;
-border-radius:6px;
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #2e7d32;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
 }
 
 /* FOOTER */
-
-footer{
-margin-top:60px;
-background:#1f3d2b;
-color:white;
-text-align:center;
-padding:20px;
+footer {
+  margin-top: 60px;
+  background: #1f3d2b;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
-
 </style>
 
 </head>
-
 <body>
 
 <header>
-
-<div class="navbar">
-
-  <a href={base} class="logo">
-      <img src={base + 'images/iron-valley-logo.png'} alt="Iron Valley Adventures" />
+  <div class="navbar">
+    <!-- LOGO -->
+    <a href={base} class="logo">
+      <img src={`${base}iron-valley-logo.png`} alt="Iron Valley Adventures" />
       <span>Iron Valley Adventures</span>
     </a>
 
-<nav>
-  <a href={base}>Home</a>
-  <a href={base + 'tours'}>Tours</a>
-  <a href={base + 'experience'}>Experience</a>
-  <a href={base + 'contact'}>Contact</a>
-</nav>
-
-</div>
-
+    <!-- NAV LINKS -->
+    <nav>
+      <a href={base}>Home</a>
+      <a href={base + 'tours'}>Tours</a>
+      <a href={base + 'experience'}>Experience</a>
+      <a href={base + 'contact'}>Contact</a>
+    </nav>
+  </div>
 </header>
 
+<!-- PAGE CONTENT -->
 <div class="container">
-<slot />
+  <slot />
 </div>
 
 <footer>
-<p>© 2026 Iron Valley Adventures</p>
+  <p>© 2026 Iron Valley Adventures</p>
 </footer>
 
 </body>
