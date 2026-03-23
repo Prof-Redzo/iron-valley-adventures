@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+const base = import.meta.env.BASE_URL;
 ---
 
 <MainLayout title="Iron Valley Adventures">
@@ -14,7 +15,7 @@ Hiking, tractor rides, traditional Bosnian food and organic berries
 in the beautiful nature of Bosnia and Herzegovina.
 </p>
 
-<a href="/tours" class="hero-btn">Explore Tours</a>
+<a href={base + 'tours'} class="hero-btn">Explore Tours</a>
 
 </section>
 
@@ -28,7 +29,7 @@ Experience nature, traditional food, and real village life
 in the beautiful village of Željezno Polje.
 </p>
 
-<a href="/contact" class="btn">Book Your Adventure</a>
+<a href={base + 'contact'} class="btn">Book Your Adventure</a>
 
 </section>
 
@@ -84,7 +85,7 @@ in the beautiful village of Željezno Polje.
 position:relative;
 text-align:center;
 padding:160px 20px;
-background-image:url("/mountain.jpg");
+background-image:url({base + 'mountain.jpg'});
 background-size:cover;
 background-position:center;
 color:white;
