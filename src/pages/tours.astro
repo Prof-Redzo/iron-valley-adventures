@@ -139,6 +139,7 @@ margin-bottom:15px;
 font-size:18px;
 max-width:700px;
 margin:auto;
+line-height:1.5;
 }
 
 
@@ -161,6 +162,7 @@ grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
 gap:30px;
 max-width:1100px;
 margin:auto;
+padding:0 10px;
 }
 
 .tour-card{
@@ -216,6 +218,7 @@ color:#1f3d2b;
 
 .extra-info p{
 margin-bottom:15px;
+line-height:1.5;
 }
 
 
@@ -227,6 +230,87 @@ text-align:center;
 background:#e8f5e9;
 padding:50px;
 border-radius:10px;
+}
+
+
+/* ===================== */
+/* 📱 MOBILE */
+/* ===================== */
+
+@media (max-width: 768px) {
+
+  /* HERO */
+
+  .hero{
+    padding:80px 15px;
+    border-radius:0;
+  }
+
+  .hero h1{
+    font-size:32px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  /* TOURS */
+
+  .tours{
+    margin-top:50px;
+  }
+
+  .tours h2{
+    font-size:26px;
+  }
+
+  .tour-grid{
+    gap:20px;
+  }
+
+  .tour-card{
+    padding:20px;
+  }
+
+  .tour-card img{
+    height:160px;
+  }
+
+  /* EXTRA INFO */
+
+  .extra-info{
+    padding:25px 15px;
+    margin-top:50px;
+  }
+
+  .extra-info h2{
+    font-size:22px;
+  }
+
+  /* CTA */
+
+  .cta{
+    padding:30px 20px;
+    margin-top:50px;
+  }
+
+}
+
+
+/* ===================== */
+/* 📱 SMALL DEVICES */
+/* ===================== */
+
+@media (max-width: 480px) {
+
+  .hero h1{
+    font-size:28px;
+  }
+
+  .tour-card img{
+    height:140px;
+  }
+
 }
 
 </style>
