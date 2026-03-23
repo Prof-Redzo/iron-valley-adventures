@@ -1,5 +1,6 @@
 ---
 const { title } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 
 <html lang="en">
@@ -10,7 +11,7 @@ const { title } = Astro.props;
 
 <title>{title}</title>
 
-<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="icon" href={base + 'favicon.png'}>
 
 <style>
 
@@ -111,16 +112,16 @@ padding:20px;
 
 <div class="navbar">
 
-<a href="/" class="logo">
-<img src="/iron-valley-logo.png" alt="Iron Valley Adventures logo">
+<a href={base} class="logo">
+<img src={base + 'images/iron-valley-logo.png'} />
 <span>Iron Valley Adventures</span>
 </a>
 
 <nav>
-<a href="/">Home</a>
-<a href="/tours">Tours</a>
-<a href="/experience">Experience</a>
-<a href="/contact">Contact</a>
+  <a href={base}>Home</a>
+  <a href={base + 'tours'}>Tours</a>
+  <a href={base + 'experience'}>Experience</a>
+  <a href={base + 'contact'}>Contact</a>
 </nav>
 
 </div>
