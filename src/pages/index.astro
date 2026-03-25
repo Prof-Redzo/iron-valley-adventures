@@ -80,16 +80,16 @@ in the beautiful village of Željezno Polje.
 <style>
 /* HERO */
 
-.hero{
-position:relative;
-text-align:center;
-padding:160px 20px;
-background-image: url("/mountain.jpg");
-background-size:cover;
-background-position:center;
-color:white;
-border-radius:10px;
-overflow:hidden;
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 140px 20px;
+  background-image: url("mountain.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  overflow: hidden;
+  border-radius: 0; 
 }
 
 .hero::before{
@@ -201,27 +201,28 @@ margin-bottom:10px;
 /* 📱 MOBILE */
 /* ===================== */
 
+/* MOBILE FIX */
 @media (max-width: 768px) {
 
-  /* HERO */
-
-  .hero{
-    padding:100px 15px;
-    border-radius:0;
+  .hero {
+    padding: 100px 15px;
+    margin: 0 -20px; /* 🔥 FULL WIDTH FIX */
+    border-radius: 0;
   }
 
-  .hero h1{
-    font-size:36px;
+  .hero h1 {
+    font-size: 34px;
   }
 
-  .hero p{
-    font-size:18px;
+  .hero p {
+    font-size: 16px;
   }
 
-  .hero-btn{
-    width:100%;
-    padding:14px;
+  .hero-btn {
+    width: 100%;
+    max-width: 280px;
   }
+
 
   /* INTRO */
 

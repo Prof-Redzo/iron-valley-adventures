@@ -5,7 +5,10 @@ const base = import.meta.env.BASE_URL;
 
 <MainLayout title="Mountain Experience">
 
-<section class="hero-exp">
+<section 
+  class="hero-exp"
+  style={`background-image: url(${import.meta.env.BASE_URL}mountain.jpg);`}
+>
 
 <div class="hero-content">
 <h1>Mahnjača Mountain Experience</h1>
@@ -172,45 +175,65 @@ Book your experience today and discover authentic Bosnian mountain life.
 /* HERO */
 
 .hero-exp{
-height:420px;
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-border-radius:10px;
+  position: relative;
+  height:420px;
+  background-image: url("/iron-valley-adventures/mountain.jpg"); 
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  border-radius:10px;
+  overflow:hidden; 
 }
 
+.hero-exp::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: rgba(0,0,0,0.35);
+}
+
+/* CONTENT */
 .hero-content{
-background:rgba(0,0,0,0.4);
-padding:40px;
-border-radius:10px;
-max-width:700px;
+  position: relative;
+  z-index:2;
+  padding:40px;
+  max-width:700px;
 }
 
+/* TEXT */
 .hero-exp h1{
-font-size:48px;
-margin-bottom:20px;
+  font-size:48px;
+  margin-bottom:20px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
+.hero-exp p{
+  text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+}
+
+/* BUTTON */
 .hero-btn{
-display:inline-block;
-margin-top:20px;
-padding:14px 28px;
-background:#2e7d32;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-size:18px;
-transition:background 0.2s ease;
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 28px;
+  background:#2e7d32;
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+  font-size:18px;
+  transition:background 0.2s ease;
 }
 
 .hero-btn:hover{
-background:#1b5e20;
+  background:#1b5e20;
 }
-
 
 /* TIMELINE */
 
@@ -350,8 +373,6 @@ border-radius:10px;
 
 @media (max-width: 768px) {
 
-  /* HERO */
-
   .hero-exp{
     height:auto;
     padding:80px 15px;
@@ -368,8 +389,11 @@ border-radius:10px;
 
   .hero-btn{
     width:100%;
+    max-width:280px;
     padding:14px;
   }
+
+}
 
   /* TIMELINE */
 
@@ -427,8 +451,6 @@ border-radius:10px;
     margin-top:50px;
     padding:30px 20px;
   }
-
-}
 
 
 /* ===================== */
